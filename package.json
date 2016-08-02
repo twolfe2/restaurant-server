@@ -20,6 +20,7 @@
     "dotenv": "^2.0.0",
     "ejs": "^2.4.2",
     "express": "^4.14.0",
+    "factual-api": "^1.0.7",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
@@ -33,8 +34,10 @@
     "moment": "^2.14.1",
     "mongoose": "^4.5.2",
     "morgan": "^1.7.0",
+    "node-yelp": "0.0.3",
     "request": "^2.74.0",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "yelp": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^3.2.2",
