@@ -4,6 +4,8 @@
   "description": "Server for restaurantIQ",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "postinstall": "bower i && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
