@@ -17,6 +17,14 @@ let app = express();
 
 
 let server = http.createServer(app);
+//CORS middleware
+const allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'example.com');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
+};
 
 server.listen(PORT, err => {
   console.log(err || `Server listening on port: ${PORT}`);
@@ -29,10 +37,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    return next();
-});
+app.use(allowCrossDomain);
 
 ///// ROUTERS ///////
 
