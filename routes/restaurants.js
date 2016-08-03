@@ -30,6 +30,7 @@ router.post('/', (req, res) => {
     select,
     offset,
     limit }, (error, response) => {
+      if (error) return res.status(400).send(error);
       console.log(response.data);
       res.send(response.data);
     });
