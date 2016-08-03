@@ -2,6 +2,7 @@
 const express = require('express');
 const request = require('request');
 const Factual = require('factual-api');
+console.log('**********Factual Info************', process.env.FACTUAL_KEY, process.env.FACTUAL_SECRET);
 const factual = new Factual(process.env.FACTUAL_KEY, process.env.FACTUAL_SECRET);
 
 let router = express.Router();
